@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 max-width=device-width">
+  <title>Sports IIT Goa</title>
+  <link rel = "icon" type = "image/png" href = "http://www.iitgoa.ac.in/img/iitgoa_logo_wx.png">
+  <meta name="designer" content="Alberto Hartzet">
+<meta name="programer" content="Alberto Hartzet">
+<meta name="author" content="Alberto Hartzet">
+<meta name="description" content="One stop to learn about our sporting culture and join any sport of your choice">
+<meta property="og:image" content="http://www.iitgoa.ac.in/img/iitgoa_logo_wx.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html, body, .page {
+  width: 100%;
+  height: 100%;
+   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
+  color: #fff; 
+}
+
+* {
+  font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+}
+
+.page {
+  position: fixed;
+}
+
+#p1 {
+  left: 0;
+}
+
+#p2, #p3, #p4, #p5,#p6, #p7 {
+  left: 100%;
+}
+
+#p1 { background: black;}
+#p2 { background: rebeccapurple;overflow: scroll; }
+#p3 { background: rebeccapurple;overflow: scroll; }
+#p4 { background: rebeccapurple;overflow: scroll; }
+#p5 { background: rebeccapurple;overflow: scroll; }
+#p6 { background: rebeccapurple;overflow: scroll; }
+#p7 { background: rebeccapurple;overflow: scroll; }
+
+#t2:target #p2,
+#t3:target #p3,
+#t4:target #p4,
+#t5:target #p5,
+#t6:target #p6,
+#t7:target #p7 {
+  transform: translateX(-90%);
+  -webkit-transform: translateX(-90%);
+  -moz-transform: translateX(-90%);
+  -o-transform: translateX(-90%);
+  transition-delay: .4s !important;
+}
+
+#t2:target #p1, 
+#t3:target #p1,
+#t4:target #p1,
+#t5:target #p1,
+#t6:target #p1,
+#t7:target #p1{
+  background: black;
+}
+
+#t2:target #p1 .icon, 
+#t3:target #p1 .icon,
+#t4:target #p1 .icon,
+#t5:target #p1 .icon,
+#t5:target #p1 .icon,
+#t5:target #p1 .icon{
+  -webkit-filter: blur(3px);
+}
+
+.icon {
+  color: #fff;
+  font-size: 32px;
+  display: block;
+}
+
+ul .icon:hover {
+  opacity: 0.5;
+}
+
+.page .icon .title {
+  line-height: 2;
+}
+
+#t2:target ul .icon,
+#t3:target ul .icon,
+#t4:target ul .icon,
+#t5:target ul .icon,
+#t6:target ul .icon,
+#t7:target ul .icon{
+  transform: scale(.6);
+  -webkit-transform: scale(.6);
+  -moz-transform: scale(.6);
+  -o-transform: scale(.6);
+  transition-delay: .25s;
+}
+
+#t2:target #dos,
+#t3:target #tres,
+#t4:target #cuatro,
+#t5:target #cinco,
+#t6:target #hex,
+#t7:target #sept, {
+  transform: scale(1.2) !important;
+  -webkit-transform: scale(1.2) !important;
+  -moz-transform: scale(1.2) !important;
+  -o-transform: scale(1.2) !important;
+}
+
+ul {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom:1;
+  left: 0;
+  margin: auto;
+  height: 280px;
+  width: 15%;
+  padding: 0;
+  text-align: center;
+ }
+
+#menu .icon {
+  margin: 50px 0;
+  transition: all .5s ease-out !important;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title, .hint {
+  display: block;
+}
+
+.title {
+  font-size: 38px;
+}
+
+.hint {
+  font-size: 13px;
+}
+
+#p4 .hint {
+  display: inherit !important;
+}
+
+.hint a {
+  color: yellow;
+  transition: all 250ms ease-out;
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+}
+
+.hint a:hover {
+  color: #FFF;
+}
+
+.line-trough {
+  text-decoration: line-through;
+}
+
+.page .icon {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  right: 10%;
+  left: 0;
+  width: 270px;
+  height: 170px;
+  margin: auto;
+  text-align: center;
+  font-size: 80px;
+  line-height: 1.3;
+  transform: translateX(360%);
+  -webkit-transform: translateX(360%);
+  -moz-transform: translateX(360%);
+  -o-transform: translateX(360%);
+  transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  -webkit-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  -moz-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  -o-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .icon {
+  height: 220px;
+}
+
+.page#p1 .icon {
+  transform: translateX(10%) !important;
+}
+
+#t2:target .page#p2 .icon,
+#t3:target .page#p3 .icon,
+#t4:target .page#p4 .icon,
+#t5:target .page#p5 .icon,
+#t6:target .page#p6 .icon,
+#t7:target .page#p7 .icon {
+  transform: translateX(0) !important;
+  -webkit-transform: translateX(0) !important;
+  -moz-transform: translateX(0) !important;
+  -o-transform: translateX(0) !important;
+  transition-delay: 1s;
+}
+#AthleticsHome,#AthleticsNews,#AthleticsContact,
+#BadmintonHome,#BadmintonNews,#BadmintonContact,
+#CricketHome,#CricketNews,#CricketContact,
+#FootballHome,#FootballNews,#FootballContact,
+#IndoorHome,#IndoorNews,#IndoorContact,
+#VolleyballHome,#VolleyballNews,#VolleyballContact,{
+    box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+{
+    font-family: Arial;
+    padding: 20px;
+    background: black;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 90%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  
+}
+
+/* Fake image */
+.fakeimg {
+    
+    width: 25%;
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: black;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+#content-desktop{display: block;}
+#content-mobile{display:none;}
+@media screen  and (max-width: 768px){#content-desktop{display:none;} #content-mobile{display: block;}}
+</style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="ct" id="t1">
+  <div class="ct" id="t2">
+    <div class="ct" id="t3">
+      <div class="ct" id="t4">
+         <div class="ct" id="t5">
+          <div class="ct" id="t6">
+            <div class="ct" id="t7">
+          <ul id="menu">
+            <a href="#t1"><li class="icon fa fa-home" id="uno"></li></a>
+            <a href="#t2"><li class="icon fa fa-shoe-prints" id="dos"></li></a>
+            <a href="#t3"><li class="icon fas fa-bold" id="tres"></li></a>
+            <a href="#t4"><li class="icon fab fa-cuttlefish" id="cuatro"></li></a>
+            <a href="#t5"><li class="icon fa fa-soccer-ball-o" id="cinco"></li></a>
+            <a href="#t6"><li class="icon fa fa-table-tennis" id="hex"></li></a>
+            <a href="#t7"><li class="icon fa fa-volleyball-ball" id="sept"></li></a>
+          </ul>
+
+<div class="page" id="p1">
+             <section class="icon fa fa-bolt"><span class="title">Sports<br>IIT Goa</span></section>  
+</div>
+
+<div class="page" id="p2">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #000;
+    color: white;
+    text-align: left;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #46473e;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px 20px;
+    width: 90%;
+    height: 100%;
+}
+</style>
+<button class="tablink" onclick="openPage('AthleticsHome', this, 'grey')" >Home</button>
+<button class="tablink" onclick="openPage('AthleticsNews', this, 'grey')">News</button>
+<button class="tablink" onclick="openPage('AthleticsContact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="location.href='mailto:sameehan.deodhar.17002.iitgoa.ac.in?Subject=I want to join the Athletics club'" target="_top" type="buttton">Join</button>
+<section class="icon fa fa-shoe-prints"><span class="title">Athletics<br>IIT Goa</span></section>
+
+
+<div id="AthleticsHome" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ <div id="content-desktop">
+  <div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+<<<<<<< HEAD
+      <div class="fakeimg" style="height:auto;"></div>
+=======
+      <div class="fakeimg" style="height:auto;">Image</div>
+>>>>>>> 9a487dd3389a5ece133fa4a628624aeb90dd3c91
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="content-mobile">
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+<<<<<<< HEAD
+      <div class="fakeimg" style="height:auto;"></div>
+=======
+      <div class="fakeimg" style="height:auto;">Image</div>
+>>>>>>> 9a487dd3389a5ece133fa4a628624aeb90dd3c91
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="AthleticsNews" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="AthleticsContact" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="content-desktop">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Athletics Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Sameehan Vivekanand Deodhar.jpg" width="400%"></div>
+      <h3>Sameehan Deodhar</h3>
+     <p><a href="mailto:sameehan.deodhar.17002iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2018 - 2019</p>
+    </div>
+  </div>
+</div>
+<div id="content-mobile">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Athletics Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Sameehan Vivekanand Deodhar.jpg" width="400%"></div>
+      <h3>Sameehan Deodhar</h3>
+     <p><a href="mailto:sameehan.deodhar.17002iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+  </div>
+   </div>
+
+<div id="Join" class="tabcontent">
+  
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div>  
+
+<div class="page" id="p3">
+            <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #000;
+    color: white;
+    float: left;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #46473e;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<button class="tablink" onclick="openPage('BadmintonHome', this, 'grey')" >Home</button>
+<button class="tablink" onclick="openPage('BadmintonNews', this, 'grey')">News</button>
+<button class="tablink" onclick="openPage('BadmintonContact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="location.href='mailto:himanshu.iit.17003.iitgoa.ac.in?Subject=I want to join the Badminton club'" target="_top" type="buttton">Join</button>
+<section class="icon fas fa-bold"><span class="title">Badminton<br>IIT Goa</span></section>
+
+<div id="BadmintonHome" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ <div id="content-desktop">
+  <div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="content-mobile">
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="BadmintonNews" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="BadmintonContact" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="content-desktop">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Badminton Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Himanshu Singhal.jpg" width="400%"></div>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <h3>Himanshu Singhal</h3>
+     <p><a href="mailto:himanshu.iit.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+</div>
+<div id="content-mobile">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Athletics Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Himanshu Singhal.jpg" width="400%"></div>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <h3>Himanshu Singhal</h3>
+     <p><a href="mailto:himanshu.iit.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="BadmintonJoin" class="tabcontent">
+  
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div>
+
+
+<div class="page" id="p4">
+            <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #000;
+    text-align: left;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #46473e;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<button class="tablink" onclick="openPage('CricketHome', this, 'grey')" >Home</button>
+<button class="tablink" onclick="openPage('CricketNews', this, 'grey')">News</button>
+<button class="tablink" onclick="openPage('CricketContact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="location.href='mailto:sameehan.deodhar.17002iitgoa.ac.in?Subject=I want to join the Cricket club'" target="_top" type="buttton">Join</button>
+<section class="icon fab fa-cuttlefish"><span class="title"><strong>Cricket<br>IIT Goa</strong></span></section>
+
+<div id="CricketHome" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ <div id="content-desktop">
+  <div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="content-mobile">
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="CricketNews" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="CricketContact" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="content-desktop">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Cricket Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Sameehan Vivekanand Deodhar.jpg" width="400%"></div>
+      <h3>Sameehan Deodhar</h3>
+     <p><a href="mailto:sameehan.deodhar.17002iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2018 - 2019</p>
+    </div>
+  </div>
+</div>
+<div id="content-mobile">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Cricket Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Sameehan Vivekanand Deodhar.jpg" width="400%"></div>
+      <h3>Sameehan Deodhar</h3>
+     <p><a href="mailto:sameehan.deodhar.17002iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+  </div>
+   </div>
+
+<div id="CricketJoin" class="tabcontent">
+  
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div> 
+
+<div class="page" id="p5">
+            <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #000;
+    text-align: left;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #46473e;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<button class="tablink" onclick="openPage('FootballHome', this, 'grey')" >Home</button>
+<button class="tablink" onclick="openPage('FootballNews', this, 'grey')">News</button>
+<button class="tablink" onclick="openPage('FootballContact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="location.href='mailto:animesh.sharma.17003.iitgoa.ac.in?Subject=I want to join the Football club'" target="_top" type="buttton">Join</button>
+<section class="icon fa fa-soccer-ball-o"><span class="title">Football<br>IIT Goa</span></section>
+<div id="FootballHome" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ <div id="content-desktop">
+  <div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="content-mobile">
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="FootballNews" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="FootballContact" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="content-desktop">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Football Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./animesh sharma.jpg" width="400%"></div>
+      <h3>Animesh Sharma</h3>
+     <p><a href="mailto:animesh.sharma.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2018 - 2019</p>
+    </div>
+  </div>
+</div>
+<div id="content-mobile">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Football Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./animesh sharma.jpg" width="400%"></div>
+      <h3>Animesh Sharma</h3>
+     <p><a href="mailto:animesh.sharma.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+  </div>
+   </div>
+
+<div id="FootballJoin" class="tabcontent">
+  
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div> 
+
+<div class="page" id="p6">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #000;
+    text-align: left;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #46473e;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<button class="tablink" onclick="openPage('IndoorHome', this, 'grey')" >Home</button>
+<button class="tablink" onclick="openPage('IndoorNews', this, 'grey')">News</button>
+<button class="tablink" onclick="openPage('IndoorContact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="location.href='mailto:himanshu.iit.17003.iitgoa.ac.in?Subject=I want to join the Indoor Sports club'" target="_top" type="buttton">Join</button>
+<section class="icon fa fa-table-tennis"><span class="title">Indoor<br>(TT + Chess)<br>IIT Goa</span></section>
+
+<div id="IndoorHome" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ <div id="content-desktop">
+  <div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="content-mobile">
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="IndoorNews" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="IndoorContact" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="content-desktop">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Indoor Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Himanshu Singhal.jpg" width="400%"></div>
+      <h3>Himanshu Singhal</h3>
+     <p><a href="mailto:himanshu.iit.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2018 - 2019</p>
+    </div>
+  </div>
+</div>
+<div id="content-mobile">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Athletics Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./Himanshu Singhal.jpg" width="400%"></div>
+      <h3>Himanshu Singhal</h3>
+     <p><a href="mailto:himanshu.iit.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="IndoorJoin" class="tabcontent">
+  
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div> 
+
+<div class="page" id="p7">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #000;
+    text-align: left;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #46473e;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<button class="tablink" onclick="openPage('VolleyballHome', this, 'grey')" >Home</button>
+<button class="tablink" onclick="openPage('VolleyballNews', this, 'grey')">News</button>
+<button class="tablink" onclick="openPage('VolleyballContact', this, 'grey')">Contact</button>
+<button class="tablink" onclick="location.href='mailto:animesh.sharma.17003.iitgoa.ac.in?Subject=I want to join the Volleyball club'" target="_top" type="buttton">Join</button>
+<section class="icon fa fa-volleyball-ball"><span class="title">Volleyball<br>IIT Goa</span></section>
+<div id="VolleyballHome" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+ <div id="content-desktop">
+  <div class="row">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="content-mobile">
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Announcements</h2>
+      <div class="fakeimg" style="height:auto;">Image</div>
+      <p>We'll be announcing about the upcomings events here</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="VolleyballNews" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2 >TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:auto">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="VolleyballContact" class="tabcontent">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="content-desktop">
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Volleyball Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./animesh sharma.jpg" width="400%"></div>
+      <h3>Animesh Sharma</h3>
+     <p><a href="mailto:animesh.sharma.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2018 - 2019</p>
+    </div>
+  </div>
+</div>
+<div id="content-mobile">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Volleyball Secretary</h2>
+      <div class="fakeimg" style="height:auto;"><img src="./animesh sharma.jpg" width="400%"></div>
+      <h3>Animesh Sharma</h3>
+     <p><a href="mailto:animesh.sharma.17003.iitgoa.ac.in?" target="_top">shoot an e-mail</a></p>
+      <p>Batch 2017 - 2021</p>
+      <p>Years active 2017 - 2018</p>
+    </div>
+  </div>
+  </div>
+  </div>
+   </div>
+
+<div id="VolleyballJoin" class="tabcontent">
+  
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+</html
